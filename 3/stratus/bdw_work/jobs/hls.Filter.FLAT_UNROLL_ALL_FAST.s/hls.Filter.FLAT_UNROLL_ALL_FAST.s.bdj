@@ -1,0 +1,12 @@
+15939		// ppid
+15942		// pid
+ws26	// host name
+bdw_work/trace/hls.Filter.FLAT_UNROLL_ALL_FAST.s.trace		// log file
+2		// state ( 0=unrun 1=running 2=success 3=failed 4=unknown 5=queued
+0		// exit status
+0		// quiet
+0		// background
+1684114104	// start time: Mon May 15 09:28:24 2023
+1684114136	// end time:   Mon May 15 09:28:56 2023
+make --no-print-directory -f Makefile -j1 CWBExec_hlsc=1 bdw_work/modules/Filter/FLAT_UNROLL_ALL_FAST/Filter_rtl.cpp bdw_work/modules/Filter/FLAT_UNROLL_ALL_FAST/Filter_rtl.v bdw_work/modules/Filter/FLAT_UNROLL_ALL_FAST/stratus_hls.bdr
+

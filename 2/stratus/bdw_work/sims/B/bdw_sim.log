@@ -1,0 +1,11 @@
+
+        SystemC 2.3.3-Accellera --- Jun 11 2021 12:51:14
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+NOTE: Cadence Design Systems Hub Simulation Platform : version 21.20-p100
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+Total run time = 46561270 ns
+Throught = 0.0140752 outputs/clock
+Average latency = 43 clocks/output
+Simulated time == 46561330 ns

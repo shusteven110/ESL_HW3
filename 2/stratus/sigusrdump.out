@@ -1,0 +1,19 @@
+*** Current stack trace:
+--> 0x2b7f2967b387 gsignal              + 37       /usr/lib64/libc.so.6
+--> 0x2b7f2967b387 gsignal              + 37       /usr/lib64/libc.so.6
+--> 0x2b7f2967ca78 abort                + 148      /usr/lib64/libc.so.6
+--> 0x2b7f28dbe663 <don't know>         + 9a663    /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+--> 0x2b7f28dca096 <don't know>         + a6096    /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+--> 0x2b7f28dca101 <don't know>         + a6101    /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+--> 0x2b7f28dca355 <don't know>         + a6355    /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+--> 0x2b7f2bbb5541 <don't know>         + 2a0541   /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libbdw_st.so
+--> 0x2b7f2bd3d88a msgAbortChk          + 5a       /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libbdw_st.so
+--> 0x2b7f2fcaeda5 vatMsgLoc(void*, MsgId, MsgLimVal const&, int, __va_list_tag*) + 145      /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libstratus_hls.so
+--> 0x2b7f2fcaf5cf message(MsgId, int, ...)   + 9f       /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libstratus_hls.so
+--> 0x2b7f28f32630 <don't know>         + f630     /usr/lib64/libpthread.so.0
+--> 0xd045b0  <don't know>         + 9045b0  
+--> 0x9a6607  <don't know>         + 5a6607  
+--> 0x9193fa  <don't know>         + 5193fa  
+--> 0x92c4be  <don't know>         + 52c4be  
+--> 0x7fb7fa  tf_igettimeprecision + 8a      
+--> 0x2b7f2b0e78ef <don't know>         + 58ef     /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/ncvlog_ssl.so

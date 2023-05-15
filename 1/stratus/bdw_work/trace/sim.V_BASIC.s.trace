@@ -1,0 +1,45 @@
+TOOL:	xrun(64)	22.03-s003: Started on May 15, 2023 at 09:08:51 CST
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+Loading snapshot worklib.top:v .................... Done
+*** Registering Hub PLI1.0 Interface***
+xcelium> source /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> run
+
+        SystemC 2.3.3-Accellera --- Jun 11 2021 12:51:14
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+
+              #################################################################
+              #                                                               #
+  FATAL 00696:# Unable to continue. Received signal, Interrupt.               #
+              #                                                               #
+              #################################################################
+
+terminate called after throwing an instance of 'int'
+NOTE: Cadence Design Systems Hub Simulation Platform : version 21.20-p100
+xmsim: *F,SIGUSR: Unix Signal SIGABRT raised from user application code. Stack trace information is captured in file sigusrdump.out.
+Stack trace information is captured in file /home/m110/m110061613/EE6470/Q1/stratus/bpad_14776.err
+***Current stack trace:
+ -->[User Code       ] (nil)     <don't know>        
+ -->[Don't Know      ] 0x18e3827 <don't know>        
+ -->[Don't Know      ] 0x18e3a95 serror               + 95      
+ -->[SSS Overhead    ] 0xb478c6  <don't know>        
+ -->[User Code       ] 0x2b0e66c34630 <don't know>         /usr/lib64/libpthread.so.0
+ -->[User Code       ] 0x2b0e6737d387 gsignal              + 37       /usr/lib64/libc.so.6
+ -->[User Code       ] 0x2b0e6737ea78 abort                + 148      /usr/lib64/libc.so.6
+ -->[User Code       ] 0x2b0e66ac0663 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b0e66acc096 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b0e66acc101 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b0e66acc355 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b0e69924541 <don't know>         /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libbdw_st.so
+ -->[User Code       ] 0x2b0e69aac88a msgAbortChk          + 5a       /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libbdw_st.so
+ -->[User Code       ] 0x2b0e6da1dda5 _Z9vatMsgLocPv5MsgIdRK9MsgLimValiP13__va_list_tag + 145      /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libstratus_hls.so
+ -->[User Code       ] 0x2b0e6da1e5cf _Z7message5MsgIdiz   + 9f       /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libstratus_hls.so
+ -->[User Code       ] 0x2b0e66c34630 <don't know>         /usr/lib64/libpthread.so.0
+ -->[TF Interface    ] 0x7fb8b9  tf_igettimeunit      + 19      
+ -->[User Code       ] 0x2b0e68e568e1 <don't know>         /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/ncvlog_ssl.so
+Total run time =	 0 s
+Throught =	0
+Average latency  =	0
+TOOL:	xrun(64)	22.03-s003: Exiting on May 15, 2023 at 09:12:54 CST  (total: 00:04:03)

@@ -1,0 +1,19 @@
+make[3]: Nothing to be done for `bdw_work/wrappers/Filter_wrap.h'.
+/usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/bin/bdw_shell /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/share/stratus/tcl/bdw_siminfo.tcl project.tcl B
+make[4]: Nothing to be done for `bdw_work/wrappers/Filter_wrap.h'.
+make --no-print-directory -f Makefile scsim_B
+Executing simulation: bdw_work/sims/B/sim_B  ../lena_std_short.bmp out.bmp
+
+
+        SystemC 2.3.3-Accellera --- Jun 11 2021 12:51:14
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+NOTE: Cadence Design Systems Hub Simulation Platform : version 21.20-p100
+Testbench sink thread read 65536 values. Average latency 11.
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+Total run time =	 5273590 ns
+Throught =	0.124272
+Average latency  =	2
+Simulated time =	 5273650 ns
+BDW_SIM_CONFIG_DIR=bdw_work/sims/B make saySimPassed 2>&1 | tee -a bdw_work/sims/B/bdw_sim.log

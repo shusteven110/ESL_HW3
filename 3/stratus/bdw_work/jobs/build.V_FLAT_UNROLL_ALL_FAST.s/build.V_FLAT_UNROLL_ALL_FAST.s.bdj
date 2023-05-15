@@ -1,0 +1,12 @@
+15147		// ppid
+15150		// pid
+ws26	// host name
+bdw_work/trace/build.V_FLAT_UNROLL_ALL_FAST.s.trace		// log file
+2		// state ( 0=unrun 1=running 2=success 3=failed 4=unknown 5=queued
+0		// exit status
+0		// quiet
+0		// background
+1684114102	// start time: Mon May 15 09:28:22 2023
+1684114143	// end time:   Mon May 15 09:29:03 2023
+make --no-print-directory -f Makefile CWBExec_build=1 build_V_FLAT_UNROLL_ALL_FAST_sub
+

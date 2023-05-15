@@ -1,0 +1,1 @@
+/usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/bin/bdw_makegen project.tcl -scsim builtin -lib bdw_work/modules/Filter/BASIC -o bdw_work/modules/Filter/BASIC/Makefile -module Filter -cynthconfig BASIC   

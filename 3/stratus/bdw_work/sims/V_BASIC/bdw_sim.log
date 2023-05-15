@@ -1,0 +1,71 @@
+TOOL:	xrun(64)	22.03-s003: Started on May 15, 2023 at 09:19:31 CST
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+file: bdw_work/sims/top_V_BASIC.v
+			$value$plusargs("BDW_VLOG_DUMPFILE+%s",dump_file);
+			              |
+xmvlog: *W,NOSYST (bdw_work/sims/top_V_BASIC.v,41|17): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	module worklib.top:v
+		errors: 0, warnings: 1
+file: bdw_work/wrappers/Filter_cosim.v
+	module worklib.Filter_cosim:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/Filter_rtl.v
+	module worklib.Filter:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_3X12_4.v
+	module worklib.Filter_RAM_3X12_4:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_18X8_2.v
+	module worklib.Filter_RAM_18X8_2:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_27X8_3.v
+	module worklib.Filter_RAM_27X8_3:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_3X8_1.v
+	module worklib.Filter_RAM_3X8_1:v
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory bdw_work/wrappers given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+*** Registering Hub PLI1.0 Interface***
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Filter_RAM_27X8_3:v <0x5ea2a266>
+			streams:   2, words:   826
+		worklib.Filter_RAM_3X8_1:v <0x6aea7533>
+			streams:   2, words:   826
+		worklib.Filter_RAM_18X8_2:v <0x37a9d735>
+			streams:   2, words:   826
+		worklib.Filter_RAM_3X12_4:v <0x51d72148>
+			streams:   2, words:   853
+		worklib.top:v <0x49c72811>
+			streams: 114, words: 104067
+		worklib.Filter:v <0x2a5240ea>
+			streams: 212, words: 126086
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 8       7
+		Registers:             267     265
+		Scalar wires:           63       -
+		Vectored wires:         42       -
+		Always blocks:         146     145
+		Initial blocks:          7       7
+		Cont. assignments:      54      76
+		Pseudo assignments:     23      23
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.top:v
+Loading snapshot worklib.top:v .................... Done
+*** Registering Hub PLI1.0 Interface***
+xcelium> source /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> run
+
+        SystemC 2.3.3-Accellera --- Jun 11 2021 12:51:14
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED

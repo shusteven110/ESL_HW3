@@ -1,0 +1,32 @@
+make[3]: Nothing to be done for `bdw_work/wrappers/Filter_wrap.h'.
+make --no-print-directory -f Makefile -j1 CWBExec_hls=1 hls_Filter_BASIC
+make[4]: `bdw_work/modules/Filter/BASIC/Filter_rtl.cpp' is up to date.
+/usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/bin/bdw_shell /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/share/stratus/tcl/bdw_siminfo.tcl project.tcl V_BASIC
+make[4]: Nothing to be done for `bdw_work/wrappers/Filter_wrap.h'.
+make[4]: `bdw_work/modules/Filter/BASIC/Filter_rtl.v' is up to date.
+bdw_wrapgen -project project.tcl -simconfig V_BASIC -top top
+make --no-print-directory -f Makefile xcelium
+bdw_wrapgen -project project.tcl -simconfig V_BASIC -top top
+
+BDW_SIM_CONFIG_DIR=bdw_work/sims/V_BASIC \
+bdw_exec -jobproject project.tcl -job sim.V_BASIC.s \
+/usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/bin/hub_ncverilog \
+	-f bdw_work/sims/V_BASIC/siminfo \
++libext+.v   +define+ioConfig +define+BDW_RTL_Filter_BASIC \
+	+nowarn+LIBNOU  +hubSetOption+libdef=bdw_work/sims/V_BASIC/sim_V_BASIC.so,argv="../lena_std_short.bmp%out.bmp" +hubSetOption+bdr=bdw_work/sims/V_BASIC/sim.bdr \
+	-l bdw_work/sims/V_BASIC/bdw_sim_verilog.log \
+	2>&1 | tee bdw_work/sims/V_BASIC/bdw_sim.log
+TOOL:	xrun(64)	22.03-s003: Started on May 15, 2023 at 09:08:51 CST
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+Loading snapshot worklib.top:v .................... Done
+*** Registering Hub PLI1.0 Interface***
+xcelium> source /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> run
+
+        SystemC 2.3.3-Accellera --- Jun 11 2021 12:51:14
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+make[3]: *** [xcelium] Error 130
+make[2]: *** [run_sim] Interrupt
+make[1]: *** [sim_V_BASIC] Interrupt

@@ -1,0 +1,8 @@
+bdw_work/sims/top_V_BASIC.v
+bdw_work/wrappers/Filter_cosim.v
+bdw_work/modules/Filter/BASIC/Filter_rtl.v
+bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_3X12_4.v
+bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_18X8_2.v
+bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_27X8_3.v
+bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_3X8_1.v
+

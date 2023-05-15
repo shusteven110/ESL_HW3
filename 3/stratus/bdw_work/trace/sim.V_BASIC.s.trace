@@ -1,0 +1,107 @@
+TOOL:	xrun(64)	22.03-s003: Started on May 15, 2023 at 09:19:31 CST
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+file: bdw_work/sims/top_V_BASIC.v
+			$value$plusargs("BDW_VLOG_DUMPFILE+%s",dump_file);
+			              |
+xmvlog: *W,NOSYST (bdw_work/sims/top_V_BASIC.v,41|17): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	module worklib.top:v
+		errors: 0, warnings: 1
+file: bdw_work/wrappers/Filter_cosim.v
+	module worklib.Filter_cosim:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/Filter_rtl.v
+	module worklib.Filter:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_3X12_4.v
+	module worklib.Filter_RAM_3X12_4:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_18X8_2.v
+	module worklib.Filter_RAM_18X8_2:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_27X8_3.v
+	module worklib.Filter_RAM_27X8_3:v
+		errors: 0, warnings: 0
+file: bdw_work/modules/Filter/BASIC/v_rtl/Filter_RAM_3X8_1.v
+	module worklib.Filter_RAM_3X8_1:v
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory bdw_work/wrappers given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+*** Registering Hub PLI1.0 Interface***
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.Filter_RAM_27X8_3:v <0x5ea2a266>
+			streams:   2, words:   826
+		worklib.Filter_RAM_3X8_1:v <0x6aea7533>
+			streams:   2, words:   826
+		worklib.Filter_RAM_18X8_2:v <0x37a9d735>
+			streams:   2, words:   826
+		worklib.Filter_RAM_3X12_4:v <0x51d72148>
+			streams:   2, words:   853
+		worklib.top:v <0x49c72811>
+			streams: 114, words: 104067
+		worklib.Filter:v <0x2a5240ea>
+			streams: 212, words: 126086
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 8       7
+		Registers:             267     265
+		Scalar wires:           63       -
+		Vectored wires:         42       -
+		Always blocks:         146     145
+		Initial blocks:          7       7
+		Cont. assignments:      54      76
+		Pseudo assignments:     23      23
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.top:v
+Loading snapshot worklib.top:v .................... Done
+*** Registering Hub PLI1.0 Interface***
+xcelium> source /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> run
+
+        SystemC 2.3.3-Accellera --- Jun 11 2021 12:51:14
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+
+              #################################################################
+              #                                                               #
+  FATAL 00696:# Unable to continue. Received signal, Interrupt.               #
+              #                                                               #
+              #################################################################
+
+terminate called after throwing an instance of 'int'
+NOTE: Cadence Design Systems Hub Simulation Platform : version 21.20-p100
+xmsim: *F,SIGUSR: Unix Signal SIGABRT raised from user application code. Stack trace information is captured in file sigusrdump.out.
+Stack trace information is captured in file /home/m110/m110061613/EE6470/Q3/stratus/bpad_2706.err
+***Current stack trace:
+ -->[User Code       ] (nil)     <don't know>        
+ -->[Don't Know      ] 0x18e3827 <don't know>        
+ -->[Don't Know      ] 0x18e3a95 serror               + 95      
+ -->[SSS Overhead    ] 0xb478c6  <don't know>        
+ -->[User Code       ] 0x2b65bec33630 <don't know>         /usr/lib64/libpthread.so.0
+ -->[User Code       ] 0x2b65bf37c387 gsignal              + 37       /usr/lib64/libc.so.6
+ -->[User Code       ] 0x2b65bf37da78 abort                + 148      /usr/lib64/libc.so.6
+ -->[User Code       ] 0x2b65beabf663 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b65beacb096 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b65beacb101 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b65beacb355 <don't know>         /usr/cadtool/cadence/XCELIUM/XCELIUM_22.03.003/tools.lnx86/lib/64bit/libstdc++.so.6
+ -->[User Code       ] 0x2b65c18b6541 <don't know>         /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libbdw_st.so
+ -->[User Code       ] 0x2b65c1a3e88a msgAbortChk          + 5a       /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libbdw_st.so
+ -->[User Code       ] 0x2b65c59afda5 _Z9vatMsgLocPv5MsgIdRK9MsgLimValiP13__va_list_tag + 145      /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libstratus_hls.so
+ -->[User Code       ] 0x2b65c59b05cf _Z7message5MsgIdiz   + 9f       /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/libstratus_hls.so
+ -->[User Code       ] 0x2b65bec33630 <don't know>         /usr/lib64/libpthread.so.0
+ -->[VPI Overhead    ] 0x918e23  <don't know>        
+ -->[VPI Overhead    ] 0x92c2e0  <don't know>        
+ -->[TF Interface    ] 0x7fb92a  tf_igettimeunit      + 8a      
+ -->[User Code       ] 0x2b65c0de88e1 <don't know>         /usr/cadtool/cadence/STRATUS/STRATUS_21.10.100/tools.lnx86/stratus/lib/64bit/ncvlog_ssl.so
+Total run time = 0 s
+Throught = 0 outputs/clock
+Average latency = 0 clocks/output
+TOOL:	xrun(64)	22.03-s003: Exiting on May 15, 2023 at 09:22:51 CST  (total: 00:03:20)

@@ -1,0 +1,12 @@
+2777		// ppid
+2780		// pid
+ws26	// host name
+bdw_work/trace/sim.V_BASIC.trace		// log file
+2		// state ( 0=unrun 1=running 2=success 3=failed 4=unknown 5=queued
+2		// exit status
+0		// quiet
+0		// background
+1684114795	// start time: Mon May 15 09:39:55 2023
+1684114836	// end time:   Mon May 15 09:40:36 2023
+make --no-print-directory -f Makefile CWBExec_sim=1 sim_V_BASIC
+
