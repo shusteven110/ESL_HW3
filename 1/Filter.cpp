@@ -86,7 +86,6 @@ void Filter::do_filter() {
 			}
 		}
 
-		// Store pixels in data_buffer
 		for (unsigned int i = 0; i != MASK_X; ++i) {
 			//HLS_CONSTRAIN_LATENCY(0, 1, "lat01");
 			data_buffer[i][0] = box[i][1];
@@ -98,22 +97,20 @@ void Filter::do_filter() {
 			wait();
 		}
 
-		// Find center before sorted 
 		for (unsigned int i = 0; i < MASK_X; ++i) {
 			//HLS_CONSTRAIN_LATENCY(0, 1, "lat01");
-			center[i] = box[i][4];
+			median[i] = box[i][4];
 			std::sort(box[i], box[i]+9);
 			wait();
 		}
 
-		// Implement medain and mean filter both
 		for (unsigned int i = 0; i < MASK_X; ++i) {
 			for (unsigned int j = 0; j < MASK_X*MASK_Y; ++j) {
 				//HLS_CONSTRAIN_LATENCY(0, 1, "lat01");
 				result[i] += box[i][j]*mask[i][j]/10;
 				wait();
 			}
-			result[i] -= center[i]/10;
+			result[i] -= median[i]/10;
 		}
 
 		sc_dt::sc_uint<24> total;

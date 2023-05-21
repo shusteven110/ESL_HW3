@@ -38,7 +38,6 @@ void Filter::do_filter() {
 #endif
 		wait();
 	}
-	//int data_buffer [3][6] = {0}; // Input data buffer
 while_1:
 	while (true) {
 loop_0:
@@ -46,7 +45,6 @@ loop_0:
 			result[i] = 0;
 			wait();
 		}
-		// Read data 
 loop_1:
 		for (sc_uint<2> v = 0; v<MASK_X; ++v) {
 loop_2:
@@ -91,7 +89,7 @@ loop_5:
 			}
 		}
 
-loop_6: // Store pixels in data_buffer
+loop_6: 
 		for (sc_uint<2> i = 0; i != MASK_X; ++i) {
 			//HLS_CONSTRAIN_LATENCY(0, 1, "lat01");
 			data_buffer[i][0] = box[i][1];
@@ -103,15 +101,15 @@ loop_6: // Store pixels in data_buffer
 			wait();
 		}
 
-loop_7: // Find center before sorted 
+loop_7: 
 		for (sc_uint<2> i = 0; i < MASK_X; ++i) {
 			//HLS_CONSTRAIN_LATENCY(0, 1, "lat01");
-			center[i] = box[i][4];
+			median[i] = box[i][4];
 			std::sort(box[i], box[i]+9);
 			wait();
 		}
 
-loop_8: // Implement medain and mean filter both		
+loop_8: 	
 		for (sc_uint<2> i = 0; i < MASK_X; ++i) {
 loop_9:
 		for (sc_uint<2> i = 0; i < MASK_X; ++i) {
@@ -120,7 +118,7 @@ loop_9:
 				result[i] += box[i][j]*mask[i][j];
 				wait();			
 			}
-			result[i] -= center[i];
+			result[i] -= median[i];
 			result[i] /= 10;
 		}
 

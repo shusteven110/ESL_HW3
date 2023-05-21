@@ -29,7 +29,7 @@ private:
 	void do_filter();
 	sc_uint<8> data_buffer [3][6];
 	sc_uint<8> box[3][9];
-	sc_uint<8> center[3];
+	sc_uint<8> median[3];
 	sc_uint<12> result[3];
 };
 #endif

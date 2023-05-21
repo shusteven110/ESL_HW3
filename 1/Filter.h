@@ -29,7 +29,7 @@ private:
 	void do_filter();
 	unsigned char data_buffer [3][6];
 	unsigned char box[3][9];
-	unsigned char center[3];
+	unsigned char median[3];
 	unsigned int result[3];
 	//unsigned char color[3];
 };
